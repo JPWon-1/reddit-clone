@@ -3,15 +3,16 @@ import React, { FormEvent, useState } from 'react'
 import InputGroup from '../components/InputGroup'
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { useAuthDispatch } from '../context/auth';
 
 
 const Login = () => {
-  
   const router = useRouter();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<any>({})
+  const dispatch = useAuthDispatch();
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -24,7 +25,7 @@ const Login = () => {
         {
           withCredentials: true,
         });
-      console.log('res',res);
+
       router.push("/login")
     } catch (error: any) {
       console.error(error);
