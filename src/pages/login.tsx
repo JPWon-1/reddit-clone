@@ -26,6 +26,7 @@ const Login = () => {
           withCredentials: true,
         });
 
+      dispatch("LOGIN", res.data?.user);
       router.push("/login")
     } catch (error: any) {
       console.error(error);
