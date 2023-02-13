@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from 'react'
 import InputGroup from '../components/InputGroup'
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import { useAuthDispatch } from '../context/auth';
+import { useAuthDispatch, useAuthState } from '../context/auth';
 
 
 const Login = () => {
@@ -12,7 +12,10 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<any>({})
+  const { authenticated } = useAuthState();
   const dispatch = useAuthDispatch();
+
+  if(authenticated) router.push("/");
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
