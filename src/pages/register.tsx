@@ -18,15 +18,16 @@ const Register = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     try {
+      console.log("register start")
       const res = await axios.post("/auth/register", {
         email,
         password,
         username,
       });
-      console.log(res);
+      console.log('res',res);
       router.push("/login")
     } catch (error: any) {
-      console.error(error);
+      console.error('register exception',error);
       setErrors(error?.response?.data || {});
     }
   }
