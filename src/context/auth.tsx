@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { User } from "../types";
-import { stringify } from "querystring";
 import axios from "axios";
 
 interface State {
