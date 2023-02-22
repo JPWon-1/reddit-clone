@@ -84,7 +84,7 @@ export default SubCreate
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     try {
-        console.log("getServerSideProps",req);
+        console.log("getServerSideProps", req);
         const cookie = req.headers.cookie;
         // 쿠키가 있다면 그 쿠키를 이용해서 백엔드에서 인증 처리하기.
         if (!cookie) throw new Error("Missing auth token cookie");
