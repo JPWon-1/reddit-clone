@@ -2,19 +2,15 @@ import Link from "next/link";
 import Image from "next/image"
 import useSWR from "swr";
 import { Sub } from "../types";
-import axios from "axios";
 import { useAuthState } from "../context/auth";
 // import {Image} from "react-native"
 
 export default function Home() {
   const { authenticated } = useAuthState();
 
-  const fetcher = async (url: string) => {
-    return await axios.get(url).then((res) => res.data);
-  };
 
   const address = `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/api/subs/sub/topSubs`;
-  const { data: topSubs } = useSWR<Sub[]>(address, fetcher);
+  const { data: topSubs } = useSWR<Sub[]>(address);
 
   return (
     <>
