@@ -36,7 +36,7 @@ const Register = () => {
     <div className='bg-white'>
       <div className='flex flex-col items-center justify-content h-screen p-6'>
         <div className='w-10/12 mx-auto md:w-96'>
-          <h1 className='mb-2 text-lg font-medium text-black'>회원가입</h1>
+          <h1 className='mb-2 text-lg font-medium'>회원가입</h1>
           <form onSubmit={handleSubmit}>
             <InputGroup
               placeholder='Email'
@@ -60,7 +60,7 @@ const Register = () => {
               회원가입
             </button>
           </form>
-          <small className='text-black'>
+          <small>
             이미 가입하셨나요?
             <Link className='ml-1 text-blue-500 uppercase' href="/login">로그인</Link>
           </small>

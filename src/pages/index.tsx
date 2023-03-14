@@ -21,7 +21,7 @@ export default function Home() {
           <div className="hidden w-4/12 ml-3 md:block">
             <div className="bg-white border rounded">
               <div className="p-4 border-b">
-                <p className="text-lg font-semibold text-center text-black">상위 커뮤니티</p>
+                <p className="text-lg font-semibold text-center">상위 커뮤니티</p>
               </div>
 
               {/* 커뮤니티 리스트 */}
@@ -40,7 +40,7 @@ export default function Home() {
                         height={24}
                       />
                     </Link>
-                    <Link href={`/r/${sub.name}`} className="ml-2 font-bold hover:cursor-pointer text-black">
+                    <Link href={`/r/${sub.name}`} className="ml-2 font-bold hover:cursor-pointer">
                       /r/{sub.name}
                     </Link>
                     <p className="ml-auto font-medium ">{sub.postCount}</p>

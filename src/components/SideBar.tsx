@@ -17,14 +17,14 @@ const SideBar = ({ sub }: Props) => {
                     <p className="font-semibold text-white">커뮤니티에 대해서</p>
                 </div>
                 <div className="p-3">
-                    <p className="mb-3 text-base text-black">{sub?.description}</p>
+                    <p className="mb-3 text-base">{sub?.description}</p>
                     <div className="flex mb-3 text-sm font-medium">
-                        <div className="w-1/2 text-black">
+                        <div className="w-1/2">
                             <p>100</p>
                             <p>멤버</p>
                         </div>
                     </div>
-                    <p className="my-3 text-black">{dayjs(sub?.createdAt).format("D MMM YYYY")}</p>
+                    <p className="my-3">{dayjs(sub?.createdAt).format("D MMM YYYY")}</p>
                     {authenticated && (
                         <div className="mx-0 my-2">
                             <Link href={`/r/${sub.name}/create`} className="w-full p-2 text-sm text-white bg-gray-400 rounded">

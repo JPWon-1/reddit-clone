@@ -41,7 +41,7 @@ const Login = () => {
     <div className='bg-white'>
       <div className='flex flex-col items-center justify-content h-screen p-6'>
         <div className='w-10/12 mx-auto md:w-96'>
-          <h1 className='mb-2 text-lg font-medium text-black'>로그인</h1>
+          <h1 className='mb-2 text-lg font-medium'>로그인</h1>
           <form onSubmit={handleSubmit}>
             <InputGroup
               placeholder='Username'
@@ -60,7 +60,7 @@ const Login = () => {
               로그인
             </button>
           </form>
-          <small className='text-black'>
+          <small>
             아직 아이디가 없나요?
             <Link className='ml-1 text-blue-500 uppercase' href="/register">회원가입</Link>
           </small>

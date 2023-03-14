@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
                 <Link href="/">Community</Link>
             </span>
             <div className="max-w-full px-4">
-                <div className="relative flex items-center bg-gray-100 border text-black rounded hover:border-gray-700 hover:bg-white">
+                <div className="relative flex items-center bg-gray-100 border rounded hover:border-gray-700 hover:bg-white">
                     <input type="text" placeholder="Search" className="px-3 py-1 bg-transparent rounded focus:outline-none" />
                 </div>
             </div>
