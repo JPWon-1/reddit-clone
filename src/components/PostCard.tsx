@@ -85,16 +85,16 @@ const PostCard = ({
                 <div className='flex items-center'>
                     {!isInSubPage && (
                         <div className='flex items-center'>
-                            <Link href={`/${subName}`}>
-                                <Image
-                                    // src={sub!.imageUrl || ""}
+                            <Link href={`/r/${subName}`}>
+                                {/* <Image
+                                    src={sub!.imageUrl}
                                     alt="sub"
                                     className='rounded-full cursor-pointer'
                                     width={12}
                                     height={12}
-                                />
+                                /> */}
                             </Link>
-                            <Link href={`/${subName}`}
+                            <Link href={`/r/${subName}`}
                                 className="ml-2 text-xs font-bold cursor-pointer hover:underline"
                             >
                                 {subName}
