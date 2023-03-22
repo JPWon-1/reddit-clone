@@ -20,8 +20,8 @@ const SideBar = ({ sub }: Props) => {
                     <p className="mb-3 text-base">{sub?.description}</p>
                     <div className="flex mb-3 text-sm font-medium">
                         <div className="w-1/2">
-                            <p>100</p>
-                            <p>멤버</p>
+                            {/* <p>100</p>
+                            <p>멤버</p> */}
                         </div>
                     </div>
                     <p className="my-3">{dayjs(sub?.createdAt).format("D MMM YYYY")}</p>
