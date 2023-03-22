@@ -1,6 +1,5 @@
 import axios from 'axios'
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
 import useSWR from 'swr';
